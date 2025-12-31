@@ -1,0 +1,7 @@
+{
+  "name": "youejia",
+  "hacs": "0.0.1",
+  "homeassistant": "2024.11.0",
+  "zip_release": true,
+  "filename": "youejia_custom.zip"
+}
