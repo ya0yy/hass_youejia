@@ -1,0 +1,191 @@
+openapi: 3.0.0
+info:
+  title: HarToOpenApi
+  version: 1.0.0
+  description: >-
+    OpenAPI spec generated from HAR data for cn.zncn.net.cn on
+    2025-12-30T08:49:29.140Z
+paths:
+  /ubus:
+    parameters: []
+    post:
+      description: ''
+      operationId: postUbus
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            example:
+              id: 1
+              jsonrpc: '2.0'
+              method: call
+              params:
+                - >-
+                  eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJVZUhvbWUiLCJleHAiOjE3Mjk4MTkwNjUsInN1YiI6Ijg0QUFEM0RELUI2OTEtNDA4NC05QzEwLUYxQkM2OURFQTUwQi1VZUhvbWUifQ.3R1k3sYgHisN5kkm6JzmgwWXZL7k_bZaYJVX154nt_Is3rWBuG9fDErpx-Z0jKnopyfQwGO9QcSTFV93QtQer34fopIfUpr4_YROT0qSemy0po-UfcS3ElgGu9ew8sOSE2hC0dHS_eB2bpqy59R5eta0olKnOmiu4wgkGB5DrNkVoWrFjbw0xpDxnqijLPCrB1iwC2aEoTOhDvl2-1exjiGJfAF8kOFI4nUU7A1yybNgCJlonaPrdlL7F9hf8fP2EFZFhtyuE-FoXhmG9TcKFPJgKZMJMaKZWC-EuzJzziM0z9dUswVRrieLT_Hq3SOjdsFXt9H44alRB8w1XuFTJg
+                - db_agent2
+                - user_get_info
+                - flavor: UeHome
+                  lang: 1
+                  platform: 1
+                  user_id: 84AAD3DD-B691-4084-9C10-F1BC69DEA50B-UeHome
+                  version: 1
+            schema:
+              additionalProperties: false
+              properties:
+                id:
+                  type: integer
+                jsonrpc:
+                  type: string
+                method:
+                  type: string
+                params:
+                  items:
+                    anyOf:
+                      - additionalProperties: false
+                        properties:
+                          flavor:
+                            type: string
+                          lang:
+                            type: integer
+                          platform:
+                            type: integer
+                          user_id:
+                            type: string
+                          version:
+                            type: integer
+                        required: []
+                        title: ParamClass
+                        type: object
+                      - type: string
+                    title: ParamElement
+                  type: array
+              required: []
+              title: UbusPostRequest
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/octet-stream:
+              example:
+                id: 1
+                jsonrpc: '2.0'
+                result:
+                  - 0
+                  - code: 0
+                    dev_all: 2
+                    devices:
+                      - is_authfrom: false
+                        is_authto: false
+                        nickname: 主卧
+                        offline: false
+                        passwd: '778737911'
+                        sn: '746011256365'
+                        subtype: 0
+                        type: 29
+                      - is_authfrom: false
+                        is_authto: false
+                        nickname: 客厅
+                        offline: false
+                        passwd: '778737911'
+                        sn: '746011256372'
+                        subtype: 0
+                        type: 29
+                    groups: []
+                    houses:
+                      '0':
+                        devices:
+                          - '746011256365'
+                          - '746011256372'
+                        groups: []
+                        house_id: 0
+                        house_name: 我的家庭
+                        is_focused: true
+                    login_time: 1703899206
+                    regist_time: 1703899206
+              schema:
+                additionalProperties: false
+                properties:
+                  id:
+                    type: integer
+                  jsonrpc:
+                    type: string
+                  result:
+                    items:
+                      anyOf:
+                        - additionalProperties: false
+                          properties:
+                            code:
+                              type: integer
+                            dev_all:
+                              type: integer
+                            devices:
+                              items:
+                                additionalProperties: false
+                                properties:
+                                  is_authfrom:
+                                    type: boolean
+                                  is_authto:
+                                    type: boolean
+                                  nickname:
+                                    type: string
+                                  offline:
+                                    type: boolean
+                                  passwd:
+                                    format: integer
+                                    type: string
+                                  sn:
+                                    type: string
+                                  subtype:
+                                    type: integer
+                                  type:
+                                    type: integer
+                                required: []
+                                title: Device
+                                type: object
+                              type: array
+                            groups:
+                              items: {}
+                              type: array
+                            houses:
+                              additionalProperties: false
+                              properties:
+                                '0':
+                                  additionalProperties: false
+                                  properties:
+                                    devices:
+                                      items:
+                                        type: string
+                                      type: array
+                                    groups:
+                                      items: {}
+                                      type: array
+                                    house_id:
+                                      type: integer
+                                    house_name:
+                                      type: string
+                                    is_focused:
+                                      type: boolean
+                                  required: []
+                                  title: '0'
+                                  type: object
+                              required: []
+                              title: Houses
+                              type: object
+                            login_time:
+                              type: integer
+                            regist_time:
+                              type: integer
+                          required: []
+                          title: ResultClass
+                          type: object
+                        - type: integer
+                      title: ResultElement
+                    type: array
+                required: []
+                title: UbusPostRequest
+                type: object
+          description: ''
+      summary: Post Ubus
+servers:
+  - url: https://cn.zncn.net.cn

@@ -1,0 +1,351 @@
+openapi: 3.0.0
+info:
+  title: HarToOpenApi
+  version: 1.0.0
+  description: >-
+    OpenAPI spec generated from HAR data for cn.zncn.net.cn on
+    2025-12-30T08:49:11.131Z
+paths:
+  /ubus:
+    parameters: []
+    post:
+      description: ''
+      operationId: postUbus
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            example:
+              id: 3
+              jsonrpc: '2.0'
+              method: call
+              params:
+                - >-
+                  eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJVZUhvbWUiLCJleHAiOjE3Mjk4MTkwNjUsInN1YiI6Ijg0QUFEM0RELUI2OTEtNDA4NC05QzEwLUYxQkM2OURFQTUwQi1VZUhvbWUifQ.3R1k3sYgHisN5kkm6JzmgwWXZL7k_bZaYJVX154nt_Is3rWBuG9fDErpx-Z0jKnopyfQwGO9QcSTFV93QtQer34fopIfUpr4_YROT0qSemy0po-UfcS3ElgGu9ew8sOSE2hC0dHS_eB2bpqy59R5eta0olKnOmiu4wgkGB5DrNkVoWrFjbw0xpDxnqijLPCrB1iwC2aEoTOhDvl2-1exjiGJfAF8kOFI4nUU7A1yybNgCJlonaPrdlL7F9hf8fP2EFZFhtyuE-FoXhmG9TcKFPJgKZMJMaKZWC-EuzJzziM0z9dUswVRrieLT_Hq3SOjdsFXt9H44alRB8w1XuFTJg
+                - user_mgr
+                - user_dev_info
+                - dev_sn:
+                    - '746011256372'
+                    - '746011256365'
+                  flavor: UeHome
+                  lang: 1
+                  platform: 1
+                  version: 1
+            schema:
+              additionalProperties: false
+              properties:
+                id:
+                  type: integer
+                jsonrpc:
+                  type: string
+                method:
+                  type: string
+                params:
+                  items:
+                    anyOf:
+                      - additionalProperties: false
+                        properties:
+                          dev_sn:
+                            items:
+                              type: string
+                            type: array
+                          flavor:
+                            type: string
+                          lang:
+                            type: integer
+                          platform:
+                            type: integer
+                          version:
+                            type: integer
+                        required: []
+                        title: ParamClass
+                        type: object
+                      - type: string
+                    title: ParamElement
+                  type: array
+              required: []
+              title: UbusPostRequest
+              type: object
+        required: true
+      responses:
+        '200':
+          content:
+            application/octet-stream:
+              example:
+                id: 3
+                jsonrpc: '2.0'
+                result:
+                  - 0
+                  - code: 0
+                    dev:
+                      - E_FGP:
+                          - '0.00'
+                          - '0.00'
+                          - '0.00'
+                        E_on: false
+                        E_price: '0.00'
+                        E_price_cur: 0
+                        E_price_save: '0.00'
+                        E_stats: 0
+                        STemp: 5
+                        bg_cfg:
+                          - 0
+                          - 50
+                          - 2
+                          - 50
+                          - 0
+                          - 20
+                          - 1
+                        code: 0
+                        cool_heat: 0
+                        crc_error: 0
+                        devtype: 2
+                        fan_speed: 0
+                        fg_open: false
+                        fgp_status: 0
+                        h_s: 0
+                        hum_time_remain_hour: 0
+                        hum_time_remain_mins: 0
+                        hw_temp_set: 18
+                        is_fan_work: false
+                        is_fg_valid: false
+                        is_heat: false
+                        is_key_lock: false
+                        k_close: false
+                        key_P: 0
+                        key_V: 0
+                        mcu_type: 181
+                        mcu_version: 12
+                        mcu_version2: 198
+                        mode: 0
+                        next_time: -1
+                        nickname: 智能温控器
+                        offline: false
+                        protectstatus: 0
+                        rssi: -45
+                        sn: '746011256365'
+                        subtype: 0
+                        sw: '18.0'
+                        sys_lock: 1
+                        t_f_show: false
+                        temp: '18.0'
+                        tempJN: 3
+                        tempOUT: 0
+                        tempSS: 0
+                        temp_avg: 18
+                        temp_floor: '17.0'
+                        temp_max: 20
+                        temp_min: 15
+                        temp_status: 18
+                        type: 29
+                        version: 3
+                        xj_hours: 0
+                        xj_temp_set: 5
+                      - E_FGP:
+                          - '0.00'
+                          - '0.00'
+                          - '0.00'
+                        E_on: false
+                        E_price: '0.00'
+                        E_price_cur: 0
+                        E_price_save: '0.00'
+                        E_stats: 0
+                        STemp: 17
+                        bg_cfg:
+                          - 0
+                          - 50
+                          - 2
+                          - 50
+                          - 0
+                          - 20
+                          - 1
+                        code: 0
+                        cool_heat: 0
+                        crc_error: 0
+                        devtype: 2
+                        fan_speed: 0
+                        fg_open: false
+                        fgp_status: 0
+                        h_s: 0
+                        hum_time_remain_hour: 0
+                        hum_time_remain_mins: 0
+                        hw_temp_set: 18
+                        is_fan_work: false
+                        is_fg_valid: false
+                        is_heat: false
+                        is_key_lock: false
+                        k_close: false
+                        key_P: 0
+                        key_V: 0
+                        mcu_type: 181
+                        mcu_version: 12
+                        mcu_version2: 186
+                        mode: 1
+                        next_time: 2957332
+                        nickname: 智能温控器
+                        offline: false
+                        protectstatus: 0
+                        rssi: -54
+                        sn: '746011256372'
+                        subtype: 0
+                        sw: '19.7'
+                        sys_lock: 1
+                        t_f_show: false
+                        temp: '19.7'
+                        tempJN: 3
+                        tempOUT: 0
+                        tempSS: 0
+                        temp_avg: 19
+                        temp_floor: '16.0'
+                        temp_max: 22
+                        temp_min: 14
+                        temp_status: 17
+                        type: 29
+                        version: 3
+                        xj_hours: 0
+                        xj_temp_set: 5
+              schema:
+                additionalProperties: false
+                properties:
+                  id:
+                    type: integer
+                  jsonrpc:
+                    type: string
+                  result:
+                    items:
+                      anyOf:
+                        - additionalProperties: false
+                          properties:
+                            code:
+                              type: integer
+                            dev:
+                              items:
+                                additionalProperties: false
+                                properties:
+                                  E_FGP:
+                                    items:
+                                      type: string
+                                    type: array
+                                  E_on:
+                                    type: boolean
+                                  E_price:
+                                    type: string
+                                  E_price_cur:
+                                    type: integer
+                                  E_price_save:
+                                    type: string
+                                  E_stats:
+                                    type: integer
+                                  STemp:
+                                    type: integer
+                                  bg_cfg:
+                                    items:
+                                      type: integer
+                                    type: array
+                                  code:
+                                    type: integer
+                                  cool_heat:
+                                    type: integer
+                                  crc_error:
+                                    type: integer
+                                  devtype:
+                                    type: integer
+                                  fan_speed:
+                                    type: integer
+                                  fg_open:
+                                    type: boolean
+                                  fgp_status:
+                                    type: integer
+                                  h_s:
+                                    type: integer
+                                  hum_time_remain_hour:
+                                    type: integer
+                                  hum_time_remain_mins:
+                                    type: integer
+                                  hw_temp_set:
+                                    type: integer
+                                  is_fan_work:
+                                    type: boolean
+                                  is_fg_valid:
+                                    type: boolean
+                                  is_heat:
+                                    type: boolean
+                                  is_key_lock:
+                                    type: boolean
+                                  k_close:
+                                    type: boolean
+                                  key_P:
+                                    type: integer
+                                  key_V:
+                                    type: integer
+                                  mcu_type:
+                                    type: integer
+                                  mcu_version:
+                                    type: integer
+                                  mcu_version2:
+                                    type: integer
+                                  mode:
+                                    type: integer
+                                  next_time:
+                                    type: integer
+                                  nickname:
+                                    type: string
+                                  offline:
+                                    type: boolean
+                                  protectstatus:
+                                    type: integer
+                                  rssi:
+                                    type: integer
+                                  sn:
+                                    type: string
+                                  subtype:
+                                    type: integer
+                                  sw:
+                                    type: string
+                                  sys_lock:
+                                    type: integer
+                                  t_f_show:
+                                    type: boolean
+                                  temp:
+                                    type: string
+                                  tempJN:
+                                    type: integer
+                                  tempOUT:
+                                    type: integer
+                                  tempSS:
+                                    type: integer
+                                  temp_avg:
+                                    type: integer
+                                  temp_floor:
+                                    type: string
+                                  temp_max:
+                                    type: integer
+                                  temp_min:
+                                    type: integer
+                                  temp_status:
+                                    type: integer
+                                  type:
+                                    type: integer
+                                  version:
+                                    type: integer
+                                  xj_hours:
+                                    type: integer
+                                  xj_temp_set:
+                                    type: integer
+                                required: []
+                                title: Dev
+                                type: object
+                              type: array
+                          required: []
+                          title: ResultClass
+                          type: object
+                        - type: integer
+                      title: ResultElement
+                    type: array
+                required: []
+                title: UbusPostRequest
+                type: object
+          description: ''
+      summary: Post Ubus
+servers:
+  - url: https://cn.zncn.net.cn
