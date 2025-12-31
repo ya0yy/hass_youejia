@@ -8,7 +8,7 @@ from homeassistant.components.climate import (
     HVACAction,
     HVACMode,
 )
-from homeassistant.components.youejia import YouEJiaConfigEntry, YouEJiaCoordinator, YoueJiaApiClient
+from . import YouEJiaConfigEntry, YouEJiaCoordinator, YoueJiaApiClient
 from homeassistant.const import ATTR_TEMPERATURE
 from homeassistant.const import UnitOfTemperature
 from homeassistant.core import HomeAssistant

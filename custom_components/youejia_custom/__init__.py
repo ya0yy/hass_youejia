@@ -7,7 +7,7 @@ from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import Platform, CONF_TOKEN
 from homeassistant.core import HomeAssistant
 
-from homeassistant.components.youejia.api import YoueJiaApiClient
+from .api import YoueJiaApiClient
 
 _PLATFORMS: list[Platform] = [Platform.CLIMATE]
 

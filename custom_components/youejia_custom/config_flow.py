@@ -15,7 +15,7 @@ from . import YoueJiaApiClient
 from . import const
 
 from .const import DOMAIN
-from ...const import CONF_TOKEN
+from homeassistant.const import CONF_TOKEN
 
 _LOGGER = logging.getLogger(__name__)
 _CONF_USER_ID = 'user_id'

@@ -10,7 +10,6 @@ from homeassistant.helpers.update_coordinator import (
 
 from .api import YoueJiaApiClient
 from .const import DOMAIN, DATA_KEY_SN
-from ...helpers import json
 
 _LOGGER = logging.getLogger(__name__)
 
